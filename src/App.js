@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import SignUp from './SignUpPage';
+import Login from './LoginPage';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import CreatePost from './CreatePost';
+import UpdatePost from './UpdatePost';
 
-function App() {
+const App = () => {
+
+  const [token, setToken] = useState(false)
+  if (token) {
+    sessionStorage.setItem('token', JSON.stringify(token))
+  }
+
+  useEffect(() => {
+    if(sessionStorage.getItem('token')){
+      let data = JSON.parse(sessionStorage.getItem('token'))
+      setToken(data) //globally inititalise this state called token
+    }
+  }, [])
+
+  //    <Route path={'/createpost'} element={<CreatePost />} />
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path={'/SignUp'} element={<SignUp />}/>
+        <Route path={'/'} element={<Login setToken={setToken}/>}/>
+        {token ? <Route path={'/homepage'} element={<HomePage />} /> : "Session timed out. Please head back\
+        to the login page"}
+        {token ? <Route path={'/createpost'} element={<CreatePost />} /> : "Session timed out. Please head back\
+        to the login page"}
+        {token ? <Route path={'/updatepost'} element={<UpdatePost />} /> : "Session timed out. Please head back\
+        to the login page"}
+      </Routes>
     </div>
-  );
+  )
 }
-
-export default App;
+export default App

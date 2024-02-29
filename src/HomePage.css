@@ -1,0 +1,91 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    text-align: center; /* Center the content */
+    background-color: #f0f0f0; /* Light grey background for the box */
+    font-size: 28px; /* Make the text bigger */
+    margin: 20px auto; /* Add some margin for spacing */
+    padding: 20px; /* Add padding inside the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: #333;
+  }
+
+
+
+
+/* Basic table styling */
+table {
+    width: 100%; /* Full-width */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 20px 0; /* Add some space around the table */
+    font-size: 0.9em; /* Adjust font size */
+    font-family: sans-serif; /* Use a nice font-family */
+    min-width: 400px; /* Minimum width */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Add some shadow for depth */
+  }
+
+  table thead tr {
+    background-color: #009879; /* Dark green background for the header */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Align header text to the left */
+    font-weight: bold; /* Make header text bold */
+  }
+
+  table th,
+  table td {
+    padding: 12px 15px; /* Add space inside each cell */
+    text-align: center;
+  }
+
+  table tbody tr {
+    border-bottom: 1px solid #dddddd; /* Add a bottom border to each row */
+  }
+
+  /* Hover effect for rows */
+  table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Light gray background for even rows */
+  }
+
+  table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879; /* Add a strong border to the last row */
+  }
+
+  table tbody tr:hover {
+    background-color: #f1f1f1; /* Lighter gray background on hover */
+  }
+
+  /* Styles for the buttons */
+button {
+    background-color: #0673e7; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 10px; /* Padding around the text */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s; /* Smooth transition for hover effect */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  button:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+    color: white;
+  }
+
+  /* Container for the pagination controls to center them */
+  pagination-controls {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    background-color: #0673e7; /* Blue background */
+    padding: 20px;
+  }
+

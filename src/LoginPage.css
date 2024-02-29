@@ -1,0 +1,67 @@
+/* Container to center the form on the page */
+.centered-form-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    text-align: center;
+    background-color: #f3f4f6 /* Light green background for the page */
+  }
+
+  form {
+    border: 1px solid #a5d6a7; /* Soft green border */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(102, 175, 145, 0.2);
+    background-color: #ffffff; /* Keep form background white for contrast */
+    width: 100%;
+    max-width: 400px; /* Adjust based on your preference */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 20px;
+    color: #2e7d32; /* Dark green for better readability */
+    font-size: 18px; /* Increase the font size */
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #c8e6c9; /* Soft green for input borders */
+    border-radius: 5px;
+    background-color: #f1f8e9; /* Very light green background for inputs */
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50; /* Vibrant green for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #388e3c; /* Darker shade of green for hover */
+  }
+
+  .link {
+    display: block; /* Make the link block-level to center it */
+    margin-top: 20px;
+    color: #4caf50; /* Vibrant green to match the button color */
+  }
+
+  .link a {
+    color: #4caf50; /* Ensure link matches */
+    text-decoration: underline; /* Optional: adds underlining to make it clear it's a link */
+  }
+
+  .link a:hover {
+    color: #388e3c; /* Darker green on hover for consistency with the button hover */
+  }

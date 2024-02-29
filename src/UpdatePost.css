@@ -1,0 +1,61 @@
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+/* Assuming the parent container can be targeted directly or has a class like .page-container */
+body, .page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use viewport height to ensure full height coverage */
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* You might adjust this or set a max-width */
+    max-width: 400px; /* Example max-width */
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; /* Adjust based on your preference */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  input::placeholder {
+    color: #aaa;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #45a049; /* Darker shade of green */
+  }
+
+  /* Focus styles for inputs */
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="number"]:focus {
+    border-color: #4CAF50; /* Green border */
+    outline: none;
+  }
